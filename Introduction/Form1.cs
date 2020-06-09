@@ -43,22 +43,20 @@ namespace Introduction
 		}
 		private void cb_autostart_CheckedChanged(object sender, EventArgs e)
 		{
-			RegistryKey my_key;
+			const string name = "Ivchenko Software®";
+			string ExePath = Application.ExecutablePath;
+			RegistryKey reg;
+			reg = Registry.CurrentUser.CreateSubKey("Software\\Microsoft\\Windows\\CurrentVersion\\Run\\");
+			
+				if (cb_autostart.Checked)
+					reg.SetValue(name, ExePath);
+				else
+					reg.DeleteValue(name);
 
-			if (this.cb_autostart.Checked)
-			{
-				my_key = Registry.LocalMachine.OpenSubKey(@"SOFTWAREMicrosoftWindowsCurrentVersionRun", true);
-				my_key.SetValue("Ivchenko", Application.ExecutablePath);
-			}
-			else
-			{
-				my_key = Registry.LocalMachine.OpenSubKey(@"SOFTWAREMicrosoftWindowsCurrentVersionRun", true);
-				my_key.DeleteValue("Ivchenko");
-			}
+				reg.Close();
 		}
 		private void cb_showdate_MouseHover(object sender, EventArgs e)
 		{
-			
 			this.cb_showdate.Font = new Font(def_font, FontStyle.Bold);
 			this.cb_showdate.ForeColor = Color.Red;
 		}
@@ -71,15 +69,9 @@ namespace Introduction
 		private void start_form_parametrs()
 		{
 			this.StartPosition = FormStartPosition.Manual;
-			this.Size = new Size(300, 150);
+			this.Size = new Size(300, 180);
 			this.TransparencyKey = BackColor;
 			this.Location = new Point(Screen.PrimaryScreen.Bounds.Width - this.Width, 0);
-			//Variant 2
-			//Point pt = Screen.PrimaryScreen.WorkingArea.Location;
-			//pt.Offset(Screen.PrimaryScreen.WorkingArea.Width - this.Width, 0);
-			//this.Location = pt;
 		}
-
-		
 	}
 }

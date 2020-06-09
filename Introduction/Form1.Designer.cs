@@ -59,7 +59,7 @@
 			this.lb_date.AutoSize = true;
 			this.lb_date.Font = new System.Drawing.Font("Comic Sans MS", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.lb_date.ForeColor = System.Drawing.Color.Yellow;
-			this.lb_date.Location = new System.Drawing.Point(63, 52);
+			this.lb_date.Location = new System.Drawing.Point(50, 46);
 			this.lb_date.Margin = new System.Windows.Forms.Padding(9, 0, 9, 0);
 			this.lb_date.Name = "lb_date";
 			this.lb_date.Size = new System.Drawing.Size(84, 40);
@@ -89,10 +89,11 @@
 			// cb_autostart
 			// 
 			this.cb_autostart.AutoSize = true;
+			this.cb_autostart.BackColor = System.Drawing.Color.ForestGreen;
 			this.cb_autostart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.cb_autostart.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.cb_autostart.ForeColor = System.Drawing.Color.Yellow;
-			this.cb_autostart.Location = new System.Drawing.Point(156, 142);
+			this.cb_autostart.Location = new System.Drawing.Point(156, 127);
 			this.cb_autostart.Name = "cb_autostart";
 			this.cb_autostart.Size = new System.Drawing.Size(115, 31);
 			this.cb_autostart.TabIndex = 3;
@@ -100,15 +101,13 @@
 			this.cb_autostart.TextAlign = System.Drawing.ContentAlignment.TopLeft;
 			this.cb_autostart.UseVisualStyleBackColor = true;
 			this.cb_autostart.CheckedChanged += new System.EventHandler(this.cb_autostart_CheckedChanged);
-			this.cb_autostart.MouseLeave += new System.EventHandler(this.cb_showdate_MouseLeave);
-			this.cb_autostart.MouseHover += new System.EventHandler(this.cb_showdate_MouseHover);
 			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(18F, 40F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.ForestGreen;
-			this.ClientSize = new System.Drawing.Size(300, 196);
+			this.ClientSize = new System.Drawing.Size(325, 184);
 			this.Controls.Add(this.cb_autostart);
 			this.Controls.Add(this.cb_showdate);
 			this.Controls.Add(this.lb_date);
