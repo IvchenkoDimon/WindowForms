@@ -35,6 +35,13 @@
 			this.lb_date = new System.Windows.Forms.Label();
 			this.cb_showdate = new System.Windows.Forms.CheckBox();
 			this.cb_autostart = new System.Windows.Forms.CheckBox();
+			this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+			this.contextMenuSystemTray = new System.Windows.Forms.ContextMenuStrip(this.components);
+			this.alwaysOnTopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.showToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.hideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.contextMenuSystemTray.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// main_timer
@@ -102,6 +109,54 @@
 			this.cb_autostart.UseVisualStyleBackColor = true;
 			this.cb_autostart.CheckedChanged += new System.EventHandler(this.cb_autostart_CheckedChanged);
 			// 
+			// notifyIcon1
+			// 
+			this.notifyIcon1.ContextMenuStrip = this.contextMenuSystemTray;
+			this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
+			this.notifyIcon1.Text = "My Clock";
+			this.notifyIcon1.Visible = true;
+			// 
+			// contextMenuSystemTray
+			// 
+			this.contextMenuSystemTray.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.alwaysOnTopToolStripMenuItem,
+            this.showToolStripMenuItem,
+            this.hideToolStripMenuItem,
+            this.closeToolStripMenuItem});
+			this.contextMenuSystemTray.Name = "contextMenuSystemTray";
+			this.contextMenuSystemTray.Size = new System.Drawing.Size(150, 92);
+			this.contextMenuSystemTray.Text = "Text of menu";
+			// 
+			// alwaysOnTopToolStripMenuItem
+			// 
+			this.alwaysOnTopToolStripMenuItem.Checked = true;
+			this.alwaysOnTopToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+			this.alwaysOnTopToolStripMenuItem.Name = "alwaysOnTopToolStripMenuItem";
+			this.alwaysOnTopToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.alwaysOnTopToolStripMenuItem.Text = "Always on top";
+			this.alwaysOnTopToolStripMenuItem.Click += new System.EventHandler(this.alwaysOnTopToolStripMenuItem_Click);
+			// 
+			// showToolStripMenuItem
+			// 
+			this.showToolStripMenuItem.Name = "showToolStripMenuItem";
+			this.showToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.showToolStripMenuItem.Text = "Show";
+			this.showToolStripMenuItem.Click += new System.EventHandler(this.showToolStripMenuItem_Click);
+			// 
+			// hideToolStripMenuItem
+			// 
+			this.hideToolStripMenuItem.Name = "hideToolStripMenuItem";
+			this.hideToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.hideToolStripMenuItem.Text = "Hide";
+			this.hideToolStripMenuItem.Click += new System.EventHandler(this.hideToolStripMenuItem_Click);
+			// 
+			// closeToolStripMenuItem
+			// 
+			this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
+			this.closeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.closeToolStripMenuItem.Text = "Close";
+			this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(18F, 40F);
@@ -124,6 +179,7 @@
 			this.Text = "MyClock";
 			this.TopMost = true;
 			this.TransparencyKey = System.Drawing.Color.Black;
+			this.contextMenuSystemTray.ResumeLayout(false);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -136,6 +192,12 @@
 		private System.Windows.Forms.Label lb_date;
 		private System.Windows.Forms.CheckBox cb_showdate;
 		private System.Windows.Forms.CheckBox cb_autostart;
+		private System.Windows.Forms.NotifyIcon notifyIcon1;
+		private System.Windows.Forms.ContextMenuStrip contextMenuSystemTray;
+		private System.Windows.Forms.ToolStripMenuItem alwaysOnTopToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem showToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem hideToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
 	}
 }
 

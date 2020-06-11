@@ -45,9 +45,8 @@ namespace Introduction
 		{
 			const string name = "Ivchenko Software®";
 			string ExePath = Application.ExecutablePath;
-			RegistryKey reg;
-			reg = Registry.CurrentUser.CreateSubKey("Software\\Microsoft\\Windows\\CurrentVersion\\Run\\");
-			
+			RegistryKey reg = Registry.CurrentUser.CreateSubKey("Software\\Microsoft\\Windows\\CurrentVersion\\Run\\"); ;
+
 				if (cb_autostart.Checked)
 					reg.SetValue(name, ExePath);
 				else
@@ -73,5 +72,25 @@ namespace Introduction
 			this.TransparencyKey = BackColor;
 			this.Location = new Point(Screen.PrimaryScreen.Bounds.Width - this.Width, 0);
 		}
+		private void alwaysOnTopToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			alwaysOnTopToolStripMenuItem.Checked = this.TopMost = this.TopMost ? false : true;
+		}
+		private void closeToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			this.Close();
+		}
+
+		private void showToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			this.Show();
+		}
+
+		private void hideToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			this.Hide();
+		}
+
+		
 	}
 }
