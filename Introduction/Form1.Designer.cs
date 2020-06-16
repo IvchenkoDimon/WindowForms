@@ -242,6 +242,7 @@
 			this.shutdownToolStripMenuItem.Name = "shutdownToolStripMenuItem";
 			this.shutdownToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
 			this.shutdownToolStripMenuItem.Text = "Shutdown";
+			this.shutdownToolStripMenuItem.Click += new System.EventHandler(this.shutdownToolStripMenuItem_Click);
 			// 
 			// toolStripMenuItem3
 			// 

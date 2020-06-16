@@ -12,9 +12,18 @@ namespace Introduction
 {
 	public partial class ShutdownForm : Form
 	{
-		public ShutdownForm()
+		Form1 parent;
+		public ShutdownForm(Form1 parent)
 		{
+			this.parent = parent;
 			InitializeComponent();
+			lb_time.Text = parent.TimeToShutdown.ToShortTimeString();
+		}
+
+		private void trackBarHours_Scroll(object sender, EventArgs e)
+		{
+			int hours = trackBarHours.Value;
+
 		}
 	}
 }

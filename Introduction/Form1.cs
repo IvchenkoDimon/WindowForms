@@ -13,6 +13,7 @@ namespace Introduction
 {
 	public partial class Form1 : Form
 	{
+		DateTime timeToShutdown;
 		Font def_font;
 		public ToolStripMenuItem AlwaysOnTopToolStripMenuItem
 		{
@@ -32,14 +33,19 @@ namespace Introduction
 				lb_date = value;
 			}
 		}
+
+		public DateTime TimeToShutdown
+		{
+			get=> timeToShutdown;
+			set => timeToShutdown = value;
+		}
 		public Form1()
 		{
 			InitializeComponent();
-
 			start_form_parametrs();
-
 			def_font = cb_showdate.Font;
 
+			timeToShutdown = DateTime.MaxValue;
 			
 		}
 
@@ -125,6 +131,13 @@ namespace Introduction
 		{
 			MyClockSettings msc = new MyClockSettings(this);
 			msc.Show();
+		}
+
+		private void shutdownToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			ShutdownForm sf = new ShutdownForm(this);
+
+			sf.Show();
 		}
 	}
 }
