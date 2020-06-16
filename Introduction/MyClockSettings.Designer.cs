@@ -44,7 +44,6 @@
 			this.cb_clockTopMost.TabIndex = 0;
 			this.cb_clockTopMost.Text = "Поверх всех окон";
 			this.cb_clockTopMost.UseVisualStyleBackColor = true;
-			this.cb_clockTopMost.Click += new System.EventHandler(this.cb_clockTopMost_Click);
 			// 
 			// btnOK
 			// 
@@ -78,7 +77,6 @@
 			this.cb_showdate.TabIndex = 3;
 			this.cb_showdate.Text = "Показывать дату";
 			this.cb_showdate.UseVisualStyleBackColor = true;
-			this.cb_showdate.Click += new System.EventHandler(this.cb_showdate_Click);
 			// 
 			// MyClockSettings
 			// 

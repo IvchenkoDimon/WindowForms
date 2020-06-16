@@ -45,6 +45,10 @@
 			this.checkBox1 = new System.Windows.Forms.CheckBox();
 			this.btn_close = new System.Windows.Forms.Button();
 			this.cb_clockMode = new System.Windows.Forms.ComboBox();
+			this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+			this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
+			this.shutdownToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
 			this.contextMenuSystemTray.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -126,12 +130,16 @@
 			// 
 			this.contextMenuSystemTray.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.settingsToolStripMenuItem,
+            this.toolStripMenuItem1,
+            this.shutdownToolStripMenuItem,
+            this.toolStripMenuItem2,
             this.alwaysOnTopToolStripMenuItem,
             this.showToolStripMenuItem,
             this.hideToolStripMenuItem,
+            this.toolStripMenuItem3,
             this.closeToolStripMenuItem});
 			this.contextMenuSystemTray.Name = "contextMenuSystemTray";
-			this.contextMenuSystemTray.Size = new System.Drawing.Size(181, 136);
+			this.contextMenuSystemTray.Size = new System.Drawing.Size(181, 176);
 			this.contextMenuSystemTray.Text = "Text of menu";
 			// 
 			// settingsToolStripMenuItem
@@ -219,6 +227,27 @@
 			this.cb_clockMode.Size = new System.Drawing.Size(179, 31);
 			this.cb_clockMode.TabIndex = 6;
 			// 
+			// toolStripMenuItem1
+			// 
+			this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+			this.toolStripMenuItem1.Size = new System.Drawing.Size(177, 6);
+			// 
+			// toolStripMenuItem2
+			// 
+			this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+			this.toolStripMenuItem2.Size = new System.Drawing.Size(177, 6);
+			// 
+			// shutdownToolStripMenuItem
+			// 
+			this.shutdownToolStripMenuItem.Name = "shutdownToolStripMenuItem";
+			this.shutdownToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.shutdownToolStripMenuItem.Text = "Shutdown";
+			// 
+			// toolStripMenuItem3
+			// 
+			this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+			this.toolStripMenuItem3.Size = new System.Drawing.Size(177, 6);
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(18F, 40F);
@@ -267,6 +296,10 @@
 		private System.Windows.Forms.CheckBox checkBox1;
 		private System.Windows.Forms.Button btn_close;
 		private System.Windows.Forms.ComboBox cb_clockMode;
+		private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
+		private System.Windows.Forms.ToolStripMenuItem shutdownToolStripMenuItem;
+		private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
+		private System.Windows.Forms.ToolStripSeparator toolStripMenuItem3;
 
 		public System.Windows.Forms.ToolStripMenuItem AlwaysOnTop
 		{

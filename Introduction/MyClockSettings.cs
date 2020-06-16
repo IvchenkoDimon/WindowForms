@@ -32,17 +32,19 @@ namespace Introduction
 			//	Application.OpenForms[0].TopMost = 
 			//	Application.OpenForms[0].TopMost ? false : true;
 			parent.alwaysOnTopToolStripMenuItem_Click(sender, e);
-			cb_clockTopMost.Checked = parent.AlwaysOnTopToolStripMenuItem.Checked;
+			//cb_clockTopMost.Checked = parent.AlwaysOnTopToolStripMenuItem.Checked;
 		}
 
 		private void cb_showdate_Click(object sender, EventArgs e)
 		{
-			parent.Lb_date.Visible = this.cb_showdate.Checked = parent.Lb_date.Visible ? false : true;
+			 parent.Lb_date.Visible = this.cb_showdate.Checked = parent.Lb_date.Visible ? false : true;
 		}
 
 		private void btnOK_Click(object sender, EventArgs e)
 		{
-			
+			parent.TopMost = parent.AlwaysOnTopToolStripMenuItem.Checked = this.cb_clockTopMost.Checked;
+			parent.Lb_date.Visible = this.cb_showdate.Checked;
+			this.Close();
 		}
 	}
 }
