@@ -14,6 +14,24 @@ namespace Introduction
 	public partial class Form1 : Form
 	{
 		Font def_font;
+		public ToolStripMenuItem AlwaysOnTopToolStripMenuItem
+		{
+			get
+			{
+				return alwaysOnTopToolStripMenuItem;
+			}
+		}
+		public Label Lb_date
+		{
+			get
+			{
+				return lb_date;
+			}
+			set
+			{
+				lb_date = value;
+			}
+		}
 		public Form1()
 		{
 			InitializeComponent();
@@ -29,6 +47,7 @@ namespace Introduction
 		{
 			//this.lb_time.Text = DateTime.Now.Hour + ":" + DateTime.Now.Minute + ":" + DateTime.Now.Second;
 			this.lb_time.Text = DateTime.Now.ToLongTimeString();
+
 			this.lb_date.Text = DateTime.Now.ToLongDateString(); 
 			//if (cb_showdate.Checked)
 			//	this.lb_date.Visible = true;
@@ -68,11 +87,11 @@ namespace Introduction
 		private void start_form_parametrs()
 		{
 			this.StartPosition = FormStartPosition.Manual;
-			this.Size = new Size(300, 180);
-			this.TransparencyKey = BackColor;
-			this.Location = new Point(Screen.PrimaryScreen.Bounds.Width - this.Width, 0);
+			this.Size = new Size(250, 230);
+			//this.TransparencyKey = BackColor;
+			this.Location = new Point(Screen.PrimaryScreen.Bounds.Width - this.Width, 25);
 		}
-		private void alwaysOnTopToolStripMenuItem_Click(object sender, EventArgs e)
+		public void alwaysOnTopToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			alwaysOnTopToolStripMenuItem.Checked = this.TopMost = this.TopMost ? false : true;
 		}
@@ -91,6 +110,21 @@ namespace Introduction
 			this.Hide();
 		}
 
-		
+		private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			MyClockSettings mcs = new MyClockSettings(this);
+			mcs.Show();
+		}
+
+		private void btn_close_Click(object sender, EventArgs e)
+		{
+			this.Close();
+		}
+
+		private void settingsToolStripMenuItem_DoubleClick(object sender, EventArgs e)
+		{
+			MyClockSettings msc = new MyClockSettings(this);
+			msc.Show();
+		}
 	}
 }
